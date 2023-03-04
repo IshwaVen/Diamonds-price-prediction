@@ -1,19 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
-
-
-get_ipython().run_line_magic('pip', 'install pandas --upgrade')
-
-
-# In[1]:
-
-
-import jinja2
-print(jinja2.__version__)
-
-
 # In[7]:
 
 
