@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 import xgboost as xgb
 import streamlit as st
 import pandas as pd
@@ -70,9 +64,9 @@ def predict(carat, cut, color, clarity, depth, table, x, y, z):
 
 
 
-st.title("Diamond Orice Predictor")
+st.title("Diamond Price Predictor")
 st.image("""https://www.thestreet.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTY4NjUwNDYyNTYzNDExNTkx/why-dominion-diamonds-second-trip-to-the-block-may-be-different.png""")
-st.header('Enter teh charateristics of the diamond:')
+st.header('Enter the diamond charateristics:')
 
 
 
@@ -89,16 +83,9 @@ z = st.number_input('Diamond Height (Z) in mm:', min_value=0.1, max_value=100.0,
 
 if st.button("Predict diamond price"):
     price = predict(carat, cut, color, clarity, depth, table, x, y, z)
-    st.success(f'The predicted price diamons is ${price[0]:.2f} USD')
+    st.success(f'The predicted diamond price is ${price[0]:.2f} USD')
 
 
-# In[6]:
-
-
-
-
-
-# In[ ]:
 
 
 
